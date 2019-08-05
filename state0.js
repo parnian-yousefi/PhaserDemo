@@ -6,6 +6,7 @@ demo.state0.prototype = {
         game.stage.backgroundColor = "#FFFFFF";
         console.log("State0");
         addKeyCallBackEventListener();
+        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     },
     update : function(){}
 }
