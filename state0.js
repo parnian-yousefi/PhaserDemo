@@ -1,15 +1,16 @@
-var demo = {};
+var demo = {}, lituris, bg;
 demo.state0 = function(){};
 demo.state0.prototype = {
     preload : function(){
-        game.load.crossOrigin = 'anonymus';
         game.load.spritesheet('background' , 'assets/spritesheets/Background.png' , 640 , 420);
-        game.load.spritesheet('mainChar' , 'assets/spritesheets/my.png' , 152 , 199);
+        game.load.spritesheet('lituris' , 'assets/spritesheets/my.png' , 152 , 199);
     },
     create : function(){
+        game.stage.backgroundColor = "#FFFFFF";
         console.log("State0");
         addKeyCallBackEventListener();
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        lituris = game.add.sprite(0,0, 'lituris');
     },
     update : function(){}
 }
